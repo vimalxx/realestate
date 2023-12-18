@@ -1,26 +1,21 @@
 import React from "react";
-
+import CardGroup from "./CardGroup";
+import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div>
       <section className="hero-section">
         <h1>Welcome to Your Dream Home</h1>
         <p>Discover the perfect property that suits your lifestyle.</p>
-        <button>Search Properties</button>
+        <Link onClick={"/property"}>
+          <Button>Search Properties</Button>
+        </Link>
       </section>
       <section className="featured-listings">
         <h2>Featured Listings</h2>
         <div className="property-card">
-          <img src="path/to/property1.jpg" alt="Property 1" />
-          <h3>Modern City Apartment</h3>
-          <p>2 Bed | 2 Bath | $500,000</p>
-          <button>View Details</button>
-        </div>
-        <div className="property-card">
-          <img src="path/to/property2.jpg" alt="Property 2" />
-          <h3>Luxury Beachfront Villa</h3>
-          <p>4 Bed | 3 Bath | $1,200,000</p>
-          <button>View Details</button>
+          <CardGroup />
         </div>
         {/* Add more featured listings as needed */}
       </section>

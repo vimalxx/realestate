@@ -13,6 +13,7 @@ const Navbar = () => {
         justifyContent: "space-between",
         padding: "10px",
         backgroundColor: "transparent",
+        fontWeight: "bold",
       }}
     >
       <div>
