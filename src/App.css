@@ -59,13 +59,17 @@
   font-weight: bold;
 }
  */
- .hero-section {
+ /* .hero-section {
   text-align: center;
  }
  .featured-listings {
   text-align: center;
- }
+ } */
  /* .property-card {
   display:inline;
   padding: 2px;
  } */
+ section {
+  text-align: center;
+  justify-content: center;
+ }

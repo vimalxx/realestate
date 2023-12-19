@@ -1,16 +1,12 @@
 import React from "react";
 import CardGroup from "./CardGroup";
-import { Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import Container1 from "./Container1";
+
 const Home = () => {
   return (
     <div>
       <section className="hero-section">
-        <h1>Welcome to Your Dream Home</h1>
-        <p>Discover the perfect property that suits your lifestyle.</p>
-        <Link onClick={"/property"}>
-          <Button>Search Properties</Button>
-        </Link>
+        <Container1 />
       </section>
       <section className="featured-listings">
         <h2>Featured Listings</h2>

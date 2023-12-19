@@ -12,7 +12,7 @@ const Navbar = () => {
         display: "flex",
         justifyContent: "space-between",
         padding: "10px",
-        backgroundColor: "transparent",
+        backgroundColor: "#8B8EF7",
         fontWeight: "bold",
       }}
     >

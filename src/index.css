@@ -5,12 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('https://i.pinimg.com/564x/ab/ee/5d/abee5de497c94e2b24bd25bca404b0c2.jpg');
+  /* background-image: url('https://i.pinimg.com/564x/ab/ee/5d/abee5de497c94e2b24bd25bca404b0c2.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   height: '100vh';
   margin: 0;
-  padding: 0;
+  padding: 0; */
 }
 
 code {
