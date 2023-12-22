@@ -1,5 +1,5 @@
 import React from "react";
-import CardGroup from "./CardGroup";
+import Container2 from "./Container2";
 import Container1 from "./Container1";
 
 const Home = () => {
@@ -9,11 +9,7 @@ const Home = () => {
         <Container1 />
       </section>
       <section className="featured-listings">
-        <h2>Featured Listings</h2>
-        <div className="property-card">
-          <CardGroup />
-        </div>
-        {/* Add more featured listings as needed */}
+        <Container2 />
       </section>
       <section className="search-section">
         <h2>Find Your Perfect Home</h2>
@@ -37,10 +33,10 @@ const Home = () => {
       <section className="about-us">
         <h2>About Our Real Estate Agency</h2>
         <p>
-          Welcome to XYZ Real Estate, where we are dedicated to helping you find
-          the perfect property. With years of experience in the real estate
-          market, our team is committed to providing exceptional service and
-          guiding you through every step of the process.
+          Welcome to Realty King, where we are dedicated to helping you find the
+          perfect property. With years of experience in the real estate market,
+          our team is committed to providing exceptional service and guiding you
+          through every step of the process.
         </p>
         <button>Contact Us</button>
       </section>

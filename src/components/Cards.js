@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Cards = ({ imageSrc, title, content, buttonText, onButtonClick }) => {
   return (
@@ -8,9 +9,9 @@ const Cards = ({ imageSrc, title, content, buttonText, onButtonClick }) => {
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Text>{content}</Card.Text>
-        <Button variant="primary" onClick={onButtonClick}>
-          {buttonText}
-        </Button>
+        <Link to={"/property"}>
+          <Button variant="primary">{buttonText}</Button>
+        </Link>
       </Card.Body>
     </Card>
   );
