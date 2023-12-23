@@ -5,10 +5,24 @@ import { Container, Row, Col } from "react-bootstrap";
 
 const About = () => {
   return (
-    <Container className="py-5">
+    <Container
+      fluid
+      className="py-5"
+      style={{
+        backgroundImage:
+          'url("https://static.vecteezy.com/system/resources/previews/008/311/935/non_2x/the-illustration-graphic-consists-of-abstract-background-with-a-blue-gradient-dynamic-shapes-composition-eps10-perfect-for-presentation-background-website-landing-page-wallpaper-vector.jpg")',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        height: "100%",
+        color: "white",
+        fontSize: "20px",
+      }}
+    >
       <Row className="justify-content-center">
         <Col md={10} className="text-center">
           <h2>About Us</h2>
+          <br />
           <p>
             Welcome to Realty King – Your Trusted Partner in Real Estate. At
             Realty King, we believe in the transformative power of real estate.

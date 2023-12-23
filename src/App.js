@@ -3,9 +3,9 @@ import "./App.css";
 import Home from "./components/Home";
 import NavbarComponent from "./components/NavbarComponent.js";
 import About from "./components/About";
-import Property from "./components/Property";
 import Login from "./components/Login";
 import SignupPage from "./components/Signup.js";
+import Container3 from "./components/Container3.js";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/property" element={<Property />} />
+          <Route path="/property" element={<Container3 />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignupPage />} />
         </Routes>
