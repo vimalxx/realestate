@@ -1,6 +1,8 @@
 import React from "react";
 import Container2 from "./Container2";
 import Container1 from "./Container1";
+import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 const Home = () => {
   return (
@@ -38,7 +40,12 @@ const Home = () => {
           our team is committed to providing exceptional service and guiding you
           through every step of the process.
         </p>
-        <button>Contact Us</button>
+        <br />
+        <Link to="/contact">
+              <Button>
+                Contact Us
+              </Button>
+            </Link>
       </section>
     </div>
   );
