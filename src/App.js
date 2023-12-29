@@ -3,8 +3,6 @@ import "./App.css";
 import Home from "./components/Home";
 import NavbarComponent from "./components/NavbarComponent.js";
 import About from "./components/About";
-import Login from "./components/Login";
-import SignupPage from "./components/Signup.js";
 import Container3 from "./components/Container3.js";
 import ContactUs from "./components/ContactUs.js";
 import Services from "./components/Services.js";
@@ -20,8 +18,6 @@ function App() {
           <Route path="/property" element={<Container3 />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<SignupPage />} />
         </Routes>
       </div>
     </BrowserRouter>
