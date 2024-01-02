@@ -7,7 +7,7 @@ const Services = () => {
     {
       title: 'Property Listings',
       description: 'Browse our extensive list of available properties.',
-      image: "property.jpg",
+      image: "im1.jpg",
     },
     {
       title: 'Home Valuation',
@@ -22,7 +22,7 @@ const Services = () => {
   ];
 
   return (
-    <Container className="mt-5" >
+    <Container className="justifyed mt-5" >
       <h2 className="text-center mb-4">Our Services</h2>
       <Row className="mt-4">
         {servicesData.map((service, index) => (

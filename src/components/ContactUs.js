@@ -9,19 +9,19 @@ const ContactUs = () => {
   };
 
   return (
-    <Container className="justify-content-md-center mt-5">
+    <Container style={{ maxWidth: "80vh", display: "flex", flexDirection: "column", padding: "100px"}}>
       <h2>Contact Us</h2>
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="formName">
           <Form.Label>Name</Form.Label>
           <Form.Control type="text" placeholder="Enter your name" required />
         </Form.Group>
-
+        <br />
         <Form.Group controlId="formEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control type="email" placeholder="Enter your email" required />
         </Form.Group>
-
+        <br />
         <Form.Group controlId="formMessage">
           <Form.Label>Message</Form.Label>
           <Form.Control as="textarea" rows={4} placeholder="Enter your message" required />

@@ -11,6 +11,13 @@ const NavbarComponent = () => {
   return (
     <Navbar bg="dark" variant="dark" className="justify-content-between">
       <Navbar.Brand as={Link} to="/" style={{ padding: "5px" }}>
+      <img
+          src="favicon_io/favicon.ico"
+          width="30"
+          height="30"
+          className="d-inline-block align-top"
+          alt="Your Logo"
+        />
         REALTY KING
       </Navbar.Brand>
       <Nav className="ml-auto" style={{ fontWeight: "bold", color: "white" }}>
