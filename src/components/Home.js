@@ -1,8 +1,8 @@
 import React from "react";
 import Container2 from "./Container2";
 import Container1 from "./Container1";
-import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
+import Container4 from "./Container4";
+import Container5 from "./Container5";
 
 const Home = () => {
   return (
@@ -14,38 +14,10 @@ const Home = () => {
         <Container2 />
       </section>
       <section className="search-section">
-        <h2>Find Your Perfect Home</h2>
-        <p>
-          Use our advanced search to discover properties based on your criteria.
-        </p>
-        <form>
-          <label>Location</label>
-          <input type="text" placeholder="Enter city or neighborhood" />
-          <label>Property Type</label>
-          <select>
-            <option>Any</option>
-            <option>Apartment</option>
-            <option>House</option>
-            <option>Condo</option>
-            {/* Add more property types as needed */}
-          </select>
-          <button type="submit">Search</button>
-        </form>
+        <Container4 />
       </section>
       <section className="about-us">
-        <h2>About Our Real Estate Agency</h2>
-        <p>
-          Welcome to Realty King, where we are dedicated to helping you find the
-          perfect property. With years of experience in the real estate market,
-          our team is committed to providing exceptional service and guiding you
-          through every step of the process.
-        </p>
-        <br />
-        <Link to="/contact">
-              <Button>
-                Contact Us
-              </Button>
-            </Link>
+        <Container5 />
       </section>
     </div>
   );

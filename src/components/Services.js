@@ -1,4 +1,3 @@
-// Services.js
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 
@@ -12,12 +11,12 @@ const Services = () => {
     {
       title: "Home Valuation",
       description: "Get a professional estimate of your property's value.",
-      image: "home-valuation.jpg",
+      image: "im2.jpg",
     },
     {
       title: "Real Estate Consultation",
       description: "Speak with our experts for personalized advice.",
-      image: "consultation.jpg",
+      image: "im3.jpg",
     },
   ];
 
@@ -34,12 +33,9 @@ const Services = () => {
         className="justifyed mt-5"
         style={{
           backgroundColor: "lightcoral",
-          backgroundPosition: "center",
           display: "flex",
           flexDirection: "column",
-          backgroundSize: "cover",
           height: "100vh",
-          backgroundRepeat: "no-repeat",
         }}
       >
         <Row className="mt-4">
@@ -48,7 +44,7 @@ const Services = () => {
               <Card>
                 <Card.Img
                   variant="top"
-                  src={`src/images/${service.image}`}
+                  src={require(`../images/${service.image}`).default}
                   alt={service.title}
                 />
                 <Card.Body>
