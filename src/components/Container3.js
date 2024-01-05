@@ -9,7 +9,7 @@ const Container3 = () => {
       id: 1,
       title: "Beautiful House",
       description:
-        "A stunning house with modern amenities. Also lawn and garage is provided.",
+        "A house with modern amenities. lawn and garage is provided.",
       image: "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg",
       price: 500000,
     },

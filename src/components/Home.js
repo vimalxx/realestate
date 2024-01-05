@@ -3,7 +3,6 @@ import Container2 from "./Container2";
 import Container1 from "./Container1";
 import Container4 from "./Container4";
 import Container5 from "./Container5";
-
 const Home = () => {
   return (
     <div>

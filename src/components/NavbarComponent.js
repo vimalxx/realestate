@@ -1,17 +1,16 @@
 // NavbarComponent.js
 import React from "react";
-import {
-  Navbar,
-  Nav
-} from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import LoginForm from "./LoginForm";
+import Profile from "./Profile";
+import LogoutForm from "./LogoutForm";
 
 const NavbarComponent = () => {
   return (
     <Navbar bg="dark" variant="dark" className="justify-content-between">
       <Navbar.Brand as={Link} to="/" style={{ padding: "5px" }}>
-      <img
+        <img
           src="favicon_io/favicon.ico"
           width="30"
           height="30"
@@ -38,6 +37,8 @@ const NavbarComponent = () => {
         </Nav.Link>
       </Nav>
       <LoginForm />
+      <LogoutForm />
+      <Profile />
     </Navbar>
   );
 };

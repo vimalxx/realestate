@@ -22,12 +22,7 @@ const Services = () => {
 
   return (
     <div style={{ backgroundColor: "lightcoral" }}>
-      <h2
-        className="text-center mb-4"
-        style={{ color: "black", paddingTop: "20px" }}
-      >
-        Our Services
-      </h2>
+      <p style={{ color: "lightcoral" }}> u</p>
       <Container
         fluid
         className="justifyed mt-5"
@@ -35,9 +30,18 @@ const Services = () => {
           backgroundColor: "lightcoral",
           display: "flex",
           flexDirection: "column",
-          height: "100vh",
+          height: "90vh",
+          backgroundSize: "cover",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
+        <h2
+          className="text-center mb-4"
+          style={{ color: "black", paddingTop: "20px" }}
+        >
+          Our Services
+        </h2>
         <Row className="mt-4">
           {servicesData.map((service, index) => (
             <Col key={index} md={4} className="mb-4">

@@ -8,7 +8,14 @@ const Property = ({ properties }) => {
     <Row xs={1} md={2} lg={3}>
       {properties.map((property) => (
         <Col key={property.id}>
-          <Card>
+          <Card
+            style={{
+              width: "50%",
+              maxHeight: "100%",
+              margin: "5px",
+              padding: "0"
+            }}
+          >
             <Card.Img variant="top" src={property.image} />
             <Card.Body>
               <Card.Title>{property.title}</Card.Title>
