@@ -6,6 +6,7 @@ import About from "./components/About";
 import Container3 from "./components/Container3.js";
 import ContactUs from "./components/ContactUs.js";
 import Services from "./components/Services.js";
+import Profile from "./components/Profile.js";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/property" element={<Container3 />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </div>
     </BrowserRouter>

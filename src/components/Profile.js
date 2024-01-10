@@ -15,13 +15,14 @@ const Profile = () => {
           src={user.picture}
           alt={user.name}
           style={{
-            borderRadius: "50px",
-            width: "50px",
-            paddingRight: "10px",
+            borderRadius: "45px",
+            width: "40px",
+            border: "1px solid white",
+            margin: "0.5rem",
           }}
         />
-        <h2>{user.name}</h2>
-        <p>{user.email}</p>
+        {/* <h2>{user.name}</h2>
+        <p>{user.email}</p> */}
       </div>
     )
   );

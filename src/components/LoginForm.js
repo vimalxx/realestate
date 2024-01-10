@@ -7,7 +7,10 @@ const LoginForm = () => {
 
   return (
     !isAuthenticated && (
-      <Button onClick={() => loginWithRedirect()} style={{ margin: "5px" }}>
+      <Button
+        onClick={() => loginWithRedirect()}
+        style={{ margin: "5px", borderRadius: "50px" }}
+      >
         Log In
       </Button>
     )

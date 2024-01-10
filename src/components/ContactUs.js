@@ -1,6 +1,13 @@
-// ContactUs.js
 import React from "react";
-import { Container, Form, Button, Card } from "react-bootstrap";
+import {
+  Container,
+  TextField,
+  Button,
+  Card,
+  Typography,
+  Grid,
+  Box,
+} from "@mui/material";
 
 const ContactUs = () => {
   const handleSubmit = (e) => {
@@ -9,61 +16,73 @@ const ContactUs = () => {
   };
 
   return (
-    <Container
-      fluid
-      className="d-flex align-items-center justify-content-center"
-      style={{
+    <Box
+      sx={{
+        backgroundImage:
+          'url("https://img.freepik.com/free-vector/blank-blue-halftone-background-vector_53876-144364.jpg?t=st=1704880674~exp=1704881274~hmac=3181f0d643c6d725b352858f907f9adc8d25b418944e27bfff92ff2d6171f6a1")',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
         minHeight: "100vh",
-        background:
-          "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%)",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
         color: "white",
       }}
     >
-      <Card style={{ width: "400px", padding: "20px" }}>
-        <Card.Body className="text-center">
-          <Card.Title>Contact Us</Card.Title>
-          <Form
-            onSubmit={handleSubmit}
-            style={{
-              maxWidth: "800px",
-              width: "100%",
-            }}
-          >
-            <Form.Group controlId="formName">
-              <Form.Label>Name</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="Enter your name"
-                required
-              />
-            </Form.Group>
-            <br />
-            <Form.Group controlId="formEmail">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control
-                type="email"
-                placeholder="Enter your email"
-                required
-              />
-            </Form.Group>
-            <br />
-            <Form.Group controlId="formMessage">
-              <Form.Label>Message</Form.Label>
-              <Form.Control
-                as="textarea"
-                rows={4}
-                placeholder="Enter your message"
-                required
-              />
-            </Form.Group>
-            <br />
-            <Button variant="primary" type="submit">
-              Submit
-            </Button>
-          </Form>
-        </Card.Body>
-      </Card>
-    </Container>
+      <Container maxWidth="md">
+        <Grid container justifyContent="center">
+          <Grid item xs={12} md={6}>
+            <Card elevation={3} style={{ padding: "20px" }}>
+              <Typography variant="h4" align="center" gutterBottom>
+                Contact Us
+              </Typography>
+              <form onSubmit={handleSubmit}>
+                <TextField
+                  id="formName"
+                  label="Name"
+                  type="text"
+                  placeholder="Enter your name"
+                  fullWidth
+                  required
+                  margin="normal"
+                  autoComplete="on"
+                />
+                <TextField
+                  id="formEmail"
+                  label="Email address"
+                  type="email"
+                  placeholder="Enter your email"
+                  fullWidth
+                  required
+                  margin="normal"
+                  autoComplete="on"
+                />
+                <TextField
+                  id="formMessage"
+                  label="Message"
+                  multiline
+                  rows={4}
+                  placeholder="Enter your message"
+                  fullWidth
+                  required
+                  margin="normal"
+                  autoComplete="on"
+                />
+                <Button
+                  variant="contained"
+                  color="primary"
+                  type="submit"
+                  style={{ marginTop: "1rem" }}
+                >
+                  Submit
+                </Button>
+              </form>
+            </Card>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
   );
 };
 
