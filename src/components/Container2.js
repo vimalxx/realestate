@@ -1,6 +1,5 @@
 import React from "react";
-import { Container } from "react-bootstrap";
-
+import { Container, Typography } from "@mui/material";
 import CardGroup from "./CardGroup";
 
 const Container2 = () => {
@@ -11,6 +10,7 @@ const Container2 = () => {
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     minHeight: "100vh",
+    minWidth: "100%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -18,10 +18,10 @@ const Container2 = () => {
   };
 
   return (
-    <Container fluid className="my-container" style={containerStyle}>
-      <b>
-        <h2 style={{ color: "white" }}>Featured Listings</h2>
-      </b>
+    <Container maxWidth="lg" className="my-container" style={containerStyle}>
+      <Typography variant="h4" component="h2" style={{ color: "white" }}>
+        Featured Listings
+      </Typography>
       <br />
       <div className="property-card">
         <CardGroup />

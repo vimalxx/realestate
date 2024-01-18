@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Button } from "react-bootstrap";
+import { Container, Button, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
 const Container5 = () => {
@@ -10,6 +10,7 @@ const Container5 = () => {
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     minHeight: "100vh",
+    minWidth: "100%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -19,17 +20,26 @@ const Container5 = () => {
   };
 
   return (
-    <Container fluid className="my-container" style={containerStyle}>
-      <h2>About Our Real Estate Agency</h2>
-      <p>
+    <Container maxWidth="md" className="my-container" style={containerStyle}>
+      <Typography variant="h2" component="h2" gutterBottom>
+        About Our Real Estate Agency
+      </Typography>
+      <Typography variant="body1" component="p" paragraph>
         Welcome to Realty King, where we are dedicated to helping you find the
         perfect property. With years of experience in the real estate market,
         our team is committed to providing exceptional service and guiding you
         through every step of the process.
-      </p>
+      </Typography>
 
-      <Link to="/contact">
-        <Button>Contact Us</Button>
+      <Link to="/contact" style={{ textDecoration: "none" }}>
+        <Button
+          variant="contained"
+          color="primary"
+          size="large"
+          style={{ marginTop: 20 }}
+        >
+          Contact Us
+        </Button>
       </Link>
     </Container>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Grid, Card, CardContent, Typography } from "@mui/material";
 
 const Services = () => {
   const servicesData = [
@@ -21,44 +21,46 @@ const Services = () => {
   ];
 
   return (
-    <div style={{ backgroundColor: "lightcoral" }}>
-      <p style={{ color: "lightcoral" }}> u</p>
+    <div style={{ backgroundColor: "lightcoral", minHeight: "100vh" }}>
       <Container
-        fluid
-        className="justifyed mt-5"
+        maxWidth="lg"
         style={{
           backgroundColor: "lightcoral",
           display: "flex",
           flexDirection: "column",
-          height: "90vh",
-          backgroundSize: "cover",
-          justifyContent: "center",
           alignItems: "center",
+          padding: "40px 0",
         }}
       >
-        <h2
-          className="text-center mb-4"
-          style={{ color: "black", paddingTop: "20px" }}
+        <Typography
+          variant="h2"
+          component="h2"
+          color="textPrimary"
+          gutterBottom
         >
           Our Services
-        </h2>
-        <Row className="mt-4">
+        </Typography>
+        <Grid container spacing={4} justifyContent="center" className="mt-4">
           {servicesData.map((service, index) => (
-            <Col key={index} md={4} className="mb-4">
+            <Grid key={index} item md={4}>
               <Card>
-                <Card.Img
-                  variant="top"
-                  src={require(`../images/${service.image}`).default}
+                <img
+                  src={require(`/src/images/${service.image}`).default}
                   alt={service.title}
+                  style={{ width: "100%", height: "200px", objectFit: "cover" }}
                 />
-                <Card.Body>
-                  <Card.Title>{service.title}</Card.Title>
-                  <Card.Text>{service.description}</Card.Text>
-                </Card.Body>
+                <CardContent>
+                  <Typography variant="h5" component="div">
+                    {service.title}
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary">
+                    {service.description}
+                  </Typography>
+                </CardContent>
               </Card>
-            </Col>
+            </Grid>
           ))}
-        </Row>
+        </Grid>
       </Container>
     </div>
   );

@@ -1,5 +1,5 @@
-// CardGroupComponent.js
 import React from "react";
+import { Container, Grid } from "@mui/material";
 import Cards from "./Cards";
 
 const CardGroup = () => {
@@ -8,7 +8,7 @@ const CardGroup = () => {
       id: 1,
       imageSrc:
         "https://www.home-designing.com/wp-content/uploads/2022/07/open-layout.jpg",
-      title: "Modern City Aparments",
+      title: "Modern City Apartments",
       content: "2 Bed | 2 Bath | $500,000",
       buttonText: "View Details",
     },
@@ -38,18 +38,21 @@ const CardGroup = () => {
   };
 
   return (
-    <div>
-      {cardsData.map((card) => (
-        <Cards
-          key={card.id}
-          imageSrc={card.imageSrc}
-          title={card.title}
-          content={card.content}
-          buttonText={card.buttonText}
-          onButtonClick={() => handleButtonClick(card.id)}
-        />
-      ))}
-    </div>
+    <Container>
+      <Grid container spacing={2}>
+        {cardsData.map((card) => (
+          <Grid item key={card.id} xs={12} sm={6} md={4}>
+            <Cards
+              imageSrc={card.imageSrc}
+              title={card.title}
+              content={card.content}
+              buttonText={card.buttonText}
+              onButtonClick={() => handleButtonClick(card.id)}
+            />
+          </Grid>
+        ))}
+      </Grid>
+    </Container>
   );
 };
 

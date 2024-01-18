@@ -3,9 +3,12 @@ import Container2 from "./Container2";
 import Container1 from "./Container1";
 import Container4 from "./Container4";
 import Container5 from "./Container5";
+import { CssBaseline, Container, Paper } from "@mui/material";
+
 const Home = () => {
   return (
     <div>
+      <CssBaseline />
       <section className="hero-section">
         <Container1 />
       </section>
@@ -13,7 +16,14 @@ const Home = () => {
         <Container2 />
       </section>
       <section className="search-section">
-        <Container4 />
+        <Container component="main" maxWidth="md">
+          <Paper
+            elevation={3}
+            style={{ padding: "20px", borderRadius: "8px", marginTop: "20px" }}
+          >
+            <Container4 />
+          </Paper>
+        </Container>
       </section>
       <section className="about-us">
         <Container5 />
@@ -21,4 +31,5 @@ const Home = () => {
     </div>
   );
 };
+
 export default Home;

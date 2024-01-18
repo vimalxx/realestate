@@ -1,33 +1,36 @@
-// PropertyList.js
-
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Card, CardContent, CardMedia, Typography, Grid } from "@mui/material";
 
-const Property = ({ properties }) => {
+const PropertyList = ({ properties }) => {
   return (
-    <div className="d-flex flex-wrap justify-content-around"
-    style={{}}>
+    <Grid container spacing={2} justifyContent="center">
       {properties.map((property) => (
-        <Card
-          key={property.id}
-          className="mb-3"
-          style={{
-            width: "18rem",
-            margin: "10px",
-          }}
-        >
-          <Card.Img variant="top" src={property.image} />
-          <Card.Body>
-            <Card.Title>{property.title}</Card.Title>
-            <Card.Text>{property.description}</Card.Text>
-          </Card.Body>
-          <Card.Footer>
-            <small className="text-muted">Price: ${property.price}</small>
-          </Card.Footer>
-        </Card>
+        <Grid item key={property.id} xs={12} sm={6} md={4}>
+          <Card>
+            <CardMedia
+              component="img"
+              height="140"
+              image={property.image}
+              alt={property.title}
+            />
+            <CardContent>
+              <Typography variant="h6" component="div">
+                {property.title}
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                {property.description}
+              </Typography>
+            </CardContent>
+            <CardContent>
+              <Typography variant="subtitle2" color="text.secondary">
+                Price: ${property.price}
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
       ))}
-    </div>
+    </Grid>
   );
 };
 
-export default Property;
+export default PropertyList;

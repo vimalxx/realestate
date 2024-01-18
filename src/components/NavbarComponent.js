@@ -29,7 +29,7 @@ const NavbarComponent = () => {
   };
 
   return (
-    <AppBar position="static" color="primary">
+    <AppBar position="static" sx={{ backgroundColor: "black" }}>
       <Toolbar>
         <IconButton
           edge="start"
@@ -149,7 +149,8 @@ const NavbarComponent = () => {
               button
               component={Link}
               to="/profile"
-              onClick={handleDrawerClose}>
+              onClick={handleDrawerClose}
+            >
               <ListItemText primary="Profile" />
             </ListItem>
             <LogoutForm />

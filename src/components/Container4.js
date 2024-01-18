@@ -1,6 +1,13 @@
 import React from "react";
-import { Container, Button, Form } from "react-bootstrap";
-// import { Link } from "react-router-dom";
+import {
+  Container,
+  Button,
+  TextField,
+  Select,
+  MenuItem,
+  InputLabel,
+  FormControl,
+} from "@mui/material";
 
 const Container4 = () => {
   const containerStyle = {
@@ -10,6 +17,7 @@ const Container4 = () => {
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     minHeight: "100vh",
+    minWidth: "100%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -26,28 +34,44 @@ const Container4 = () => {
   };
 
   return (
-    <Container fluid className="my-container" style={containerStyle}>
+    <Container maxWidth="md" className="my-container" style={containerStyle}>
       <h2>Find Your Perfect Home</h2>
       <p>
         Use our advanced search to discover properties based on your criteria.
       </p>
-      <Form onSubmit={handleSearch}>
-        <Form.Group controlId="location">
-          <Form.Label>Location</Form.Label>
-          <Form.Control type="text" placeholder="Enter city or neighborhood" />
-        </Form.Group>
-        <Form.Group controlId="propertyType">
-          <Form.Label>Property Type</Form.Label>
-          <Form.Control as="select">
-            <option>Any</option>
-            <option>Apartment</option>
-            <option>House</option>
-            <option>Condo</option>
+      <form onSubmit={handleSearch}>
+        <TextField
+          fullWidth
+          id="location"
+          label="Location"
+          variant="outlined"
+          margin="normal"
+          placeholder="Enter city or neighborhood"
+        />
+        <FormControl fullWidth variant="outlined" margin="normal">
+          <InputLabel id="propertyTypeLabel">Property Type</InputLabel>
+          <Select
+            label="Property Type"
+            labelId="propertyTypeLabel"
+            id="propertyType"
+          >
+            <MenuItem value="Any">Any</MenuItem>
+            <MenuItem value="Apartment">Apartment</MenuItem>
+            <MenuItem value="House">House</MenuItem>
+            <MenuItem value="Condo">Condo</MenuItem>
             {/* Add more property types as needed */}
-          </Form.Control>
-        </Form.Group>
-        <Button type="submit">Search</Button>
-      </Form>
+          </Select>
+        </FormControl>
+        <Button
+          type="submit"
+          variant="contained"
+          color="primary"
+          size="large"
+          style={{ marginTop: 20 }}
+        >
+          Search
+        </Button>
+      </form>
     </Container>
   );
 };

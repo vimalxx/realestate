@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Button } from "react-bootstrap";
+import { Container, Button, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
 const Container1 = () => {
@@ -10,6 +10,7 @@ const Container1 = () => {
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     minHeight: "100vh",
+    minWidth: "100%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -18,16 +19,19 @@ const Container1 = () => {
   };
 
   return (
-    <Container fluid className="my-container" style={containerStyle}>
-      <b>
-        <h1>Welcome to Your Dream Home</h1>
-      </b>
+    <Container maxWidth="lg" className="my-container" style={containerStyle}>
+      <Typography variant="h2" component="b" gutterBottom>
+        Welcome to Your Dream Home
+      </Typography>
 
-      <b>
-        <p>Discover the perfect property that suits your lifestyle.</p>
-      </b>
-      <Link to={"/property"}>
-        <Button>Search Properties</Button>
+      <Typography variant="h5" component="b" paragraph>
+        Discover the perfect property that suits your lifestyle.
+      </Typography>
+
+      <Link to="/property" style={{ textDecoration: "none" }}>
+        <Button variant="contained" color="primary">
+          Search Properties
+        </Button>
       </Link>
     </Container>
   );

@@ -8,7 +8,7 @@ const LogoutForm = () => {
   return (
     isAuthenticated && (
       <Button
-        style={{ borderRadius: "50px", width: "100px", height: "50px" }}
+        style={{ borderRadius: "50px", width: "90px", height: "50px" }}
         onClick={() =>
           logout({ logoutParams: { returnTo: window.location.origin } })
         }
