@@ -11,11 +11,6 @@ import {
 
 const Container4 = () => {
   const containerStyle = {
-    backgroundImage:
-      'url("https://img.freepik.com/free-vector/blank-blue-halftone-background-vector_53876-144364.jpg?t=st=1704306989~exp=1704307589~hmac=03e906a724d5b5de476c9798ff7333bd9145cf5088ae55bc81b5b9e5644fa7bb")',
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
     minHeight: "100vh",
     minWidth: "100%",
     display: "flex",

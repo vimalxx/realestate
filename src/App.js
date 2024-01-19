@@ -1,17 +1,18 @@
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./App.css";
+import CssBaseline from "@mui/material/CssBaseline";
+import NavbarComponent from "./components/NavbarComponent";
 import Home from "./components/Home";
-import NavbarComponent from "./components/NavbarComponent.js";
 import About from "./components/About";
-import Container3 from "./components/Container3.js";
-import ContactUs from "./components/ContactUs.js";
-import Services from "./components/Services.js";
-import Profile from "./components/Profile.js";
+import Container3 from "./components/Container3";
+import ContactUs from "./components/ContactUs";
+import Services from "./components/Services";
+import Profile from "./components/Profile";
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
+      <CssBaseline />
         <NavbarComponent />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -21,7 +22,6 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/profile" element={<Profile />} />
         </Routes>
-      </div>
     </BrowserRouter>
   );
 }

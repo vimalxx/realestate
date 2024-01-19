@@ -1,30 +1,77 @@
-import { useAuth0 } from "@auth0/auth0-react";
 import React from "react";
+import { useAuth0 } from "@auth0/auth0-react";
+import {
+  Avatar,
+  Paper,
+  Container,
+  Typography,
+  CircularProgress,
+  Button,
+  Alert,
+} from "@mui/material";
+import LogoutForm from "./LogoutForm";
 
 const Profile = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
 
   if (isLoading) {
-    return <div>Loading ...</div>;
+    return <CircularProgress />;
   }
 
   return (
-    isAuthenticated && (
-      <div>
-        <img
-          src={user.picture}
-          alt={user.name}
+    <Container
+      component="main"
+      maxWidth="md"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        minHeight: "100vh",
+      }}
+    >
+      {isAuthenticated ? (
+        <Paper
+          elevation={3}
           style={{
-            borderRadius: "45px",
-            width: "40px",
-            border: "1px solid white",
-            margin: "0.5rem",
+            padding: 46,
+            borderRadius: "15px",
+            marginTop: "20px",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            textAlign: "center",
+            color: "black",
+            backgroundColor: "beige",
           }}
-        />
-        {/* <h2>{user.name}</h2>
-        <p>{user.email}</p> */}
-      </div>
-    )
+        >
+          <Avatar
+            alt={user.name}
+            src={user.picture}
+            sx={{
+              border: "2px solid white",
+              width: 80,
+              height: 80,
+              marginBottom: "10px",
+            }}
+          />
+          {/* Additional profile information if needed */}
+          <Typography variant="h6" gutterBottom>
+            {user.name}
+          </Typography>
+          <Typography variant="body2" color="textSecondary">
+            {user.email}
+          </Typography>
+          <Button>
+            <LogoutForm />
+          </Button>
+        </Paper>
+      ) : (
+        <Alert severity="info" style={{ marginTop: "20px" }}>
+          Please log in to view the profile page.
+        </Alert>
+      )}
+    </Container>
   );
 };
 

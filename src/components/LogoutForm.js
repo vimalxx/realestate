@@ -1,6 +1,6 @@
-import { useAuth0 } from "@auth0/auth0-react";
 import React from "react";
-import { Button } from "react-bootstrap";
+import { useAuth0 } from "@auth0/auth0-react";
+import Button from "@mui/material/Button";
 
 const LogoutForm = () => {
   const { logout, isAuthenticated } = useAuth0();
@@ -9,9 +9,11 @@ const LogoutForm = () => {
     isAuthenticated && (
       <Button
         style={{ borderRadius: "50px", width: "90px", height: "50px" }}
-        onClick={() =>
-          logout({ logoutParams: { returnTo: window.location.origin } })
+        onClick={
+          () => logout({ returnTo: window.location.origin }) // 'logoutParams' is not needed
         }
+        variant="text" // Optional: Set the button variant (contained/outlined/text)
+        color="primary" // Optional: Set the button color (primary/secondary/default)
       >
         Log Out
       </Button>

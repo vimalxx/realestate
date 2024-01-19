@@ -19,11 +19,16 @@ const Home = () => {
         <Container component="main" maxWidth="md">
           <Paper
             elevation={3}
-            style={{ padding: "20px", borderRadius: "8px", marginTop: "20px" }}
+            style={{
+              padding: "20px",
+              borderRadius: "8px",
+              marginTop: "20px",
+            }}
           >
             <Container4 />
           </Paper>
         </Container>
+        <br />
       </section>
       <section className="about-us">
         <Container5 />

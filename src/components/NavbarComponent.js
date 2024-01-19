@@ -14,7 +14,6 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
 import LoginForm from "./LoginForm";
-import Profile from "./Profile";
 import LogoutForm from "./LogoutForm";
 
 const NavbarComponent = () => {
@@ -99,7 +98,6 @@ const NavbarComponent = () => {
           </Button>
           <LoginForm />
           <LogoutForm />
-          <Profile />
         </nav>
 
         {/* Mobile Drawer */}
