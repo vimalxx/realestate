@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Button, Typography } from "@mui/material";
+import { Container, Button, Typography, Link as MuiLink } from "@mui/material";
 import { Link } from "react-router-dom";
 
 const Container5 = () => {
@@ -11,16 +11,19 @@ const Container5 = () => {
     backgroundRepeat: "no-repeat",
     minHeight: "100vh",
     minWidth: "100%",
+    color: "white",
     display: "flex",
+    flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    flexDirection: "column",
-    fontSize: "30px",
-    color: "white",
+    textAlign: "center",
+    padding: "20px",
+    borderRadius: "8px",
+    boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
   };
 
   return (
-    <Container maxWidth="md" className="my-container" style={containerStyle}>
+    <Container fluid maxWidth="md" className="my-container" sx={containerStyle}>
       <Typography variant="h2" component="h2" gutterBottom>
         About Our Real Estate Agency
       </Typography>
@@ -31,16 +34,16 @@ const Container5 = () => {
         through every step of the process.
       </Typography>
 
-      <Link to="/contact" style={{ textDecoration: "none" }}>
+      <MuiLink component={Link} to="/contact" underline="none">
         <Button
           variant="contained"
           color="primary"
           size="large"
-          style={{ marginTop: 20 }}
+          sx={{ marginTop: 4 }}
         >
           Contact Us
         </Button>
-      </Link>
+      </MuiLink>
     </Container>
   );
 };

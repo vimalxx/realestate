@@ -34,7 +34,7 @@ const Profile = () => {
         <Paper
           elevation={3}
           style={{
-            padding: 46,
+            padding: "46px",
             borderRadius: "15px",
             marginTop: "20px",
             display: "flex",
@@ -49,18 +49,17 @@ const Profile = () => {
             alt={user.name}
             src={user.picture}
             sx={{
-              border: "2px solid white",
-              width: 80,
-              height: 80,
-              marginBottom: "10px",
+              width: 90,
+              height: 90,
+              margin: "0 auto 16px",
             }}
           />
           {/* Additional profile information if needed */}
-          <Typography variant="h6" gutterBottom>
-            {user.name}
+          <Typography variant="h5" component="div" gutterBottom>
+            Hai! {user.name}
           </Typography>
-          <Typography variant="body2" color="textSecondary">
-            {user.email}
+          <Typography>
+            <b>Email:</b> {user.email}
           </Typography>
           <Button>
             <LogoutForm />
@@ -68,7 +67,7 @@ const Profile = () => {
         </Paper>
       ) : (
         <Alert severity="info" style={{ marginTop: "20px" }}>
-          Please log in to view the profile page.
+          Please log in to view the profile page. 
         </Alert>
       )}
     </Container>

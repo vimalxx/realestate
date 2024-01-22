@@ -25,8 +25,7 @@ const CardGroup = () => {
       imageSrc:
         "https://www.indiabullsrealestate.com/wp-content/uploads/2016/12/one-indiabulls-vadodara.jpg",
       title: "Commercial Property",
-      content:
-        "The Mall with 20 floors. Each floor contains more than 50 rooms.",
+      content: "The Mall.Floor contains more rooms.",
       buttonText: "View Details",
     },
     // Add more cards as needed

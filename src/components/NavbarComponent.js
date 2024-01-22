@@ -10,6 +10,7 @@ import {
   ListItem,
   ListItemText,
   Divider,
+  Hidden,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
@@ -55,107 +56,111 @@ const NavbarComponent = () => {
         </Typography>
 
         {/* Desktop Navbar Links */}
-        <nav style={{ display: "flex" }}>
-          <Button
-            component={Link}
-            to="/"
-            color="inherit"
-            sx={{ fontWeight: "bold", mx: 1 }}
-          >
-            Home
-          </Button>
-          <Button
-            component={Link}
-            to="/property"
-            color="inherit"
-            sx={{ fontWeight: "bold", mx: 1 }}
-          >
-            Property
-          </Button>
-          <Button
-            component={Link}
-            to="/about"
-            color="inherit"
-            sx={{ fontWeight: "bold", mx: 1 }}
-          >
-            About
-          </Button>
-          <Button
-            component={Link}
-            to="/services"
-            color="inherit"
-            sx={{ fontWeight: "bold", mx: 1 }}
-          >
-            Services
-          </Button>
-          <Button
-            component={Link}
-            to="/contact"
-            color="inherit"
-            sx={{ fontWeight: "bold", mx: 1 }}
-          >
-            Contact
-          </Button>
-          <LoginForm />
-          <LogoutForm />
-        </nav>
-
-        {/* Mobile Drawer */}
-        <Drawer anchor="left" open={drawerOpen} onClose={handleDrawerClose}>
-          <List>
-            <ListItem
-              button
+        <Hidden smDown>
+          <nav style={{ display: "flex" }}>
+            <Button
               component={Link}
               to="/"
-              onClick={handleDrawerClose}
+              color="inherit"
+              sx={{ fontWeight: "bold", mx: 1 }}
             >
-              <ListItemText primary="Home" />
-            </ListItem>
-            <ListItem
-              button
+              Home
+            </Button>
+            <Button
               component={Link}
               to="/property"
-              onClick={handleDrawerClose}
+              color="inherit"
+              sx={{ fontWeight: "bold", mx: 1 }}
             >
-              <ListItemText primary="Property" />
-            </ListItem>
-            <ListItem
-              button
+              Property
+            </Button>
+            <Button
               component={Link}
               to="/about"
-              onClick={handleDrawerClose}
+              color="inherit"
+              sx={{ fontWeight: "bold", mx: 1 }}
             >
-              <ListItemText primary="About" />
-            </ListItem>
-            <ListItem
-              button
+              About
+            </Button>
+            <Button
               component={Link}
               to="/services"
-              onClick={handleDrawerClose}
+              color="inherit"
+              sx={{ fontWeight: "bold", mx: 1 }}
             >
-              <ListItemText primary="Services" />
-            </ListItem>
-            <ListItem
-              button
+              Services
+            </Button>
+            <Button
               component={Link}
               to="/contact"
-              onClick={handleDrawerClose}
+              color="inherit"
+              sx={{ fontWeight: "bold", mx: 1 }}
             >
-              <ListItemText primary="Contact" />
-            </ListItem>
-            <ListItem
-              button
-              component={Link}
-              to="/profile"
-              onClick={handleDrawerClose}
-            >
-              <ListItemText primary="Profile" />
-            </ListItem>
+              Contact
+            </Button>
+            <LoginForm />
             <LogoutForm />
-          </List>
-          <Divider />
-          {/* Add additional Drawer items for login, logout, profile as needed */}
-        </Drawer>
+          </nav>
+        </Hidden>
+
+        {/* Mobile Drawer */}
+        <Hidden mdUp>
+          <Drawer anchor="left" open={drawerOpen} onClose={handleDrawerClose}>
+            <List>
+              <ListItem
+                button
+                component={Link}
+                to="/"
+                onClick={handleDrawerClose}
+              >
+                <ListItemText primary="Home" />
+              </ListItem>
+              <ListItem
+                button
+                component={Link}
+                to="/property"
+                onClick={handleDrawerClose}
+              >
+                <ListItemText primary="Property" />
+              </ListItem>
+              <ListItem
+                button
+                component={Link}
+                to="/about"
+                onClick={handleDrawerClose}
+              >
+                <ListItemText primary="About" />
+              </ListItem>
+              <ListItem
+                button
+                component={Link}
+                to="/services"
+                onClick={handleDrawerClose}
+              >
+                <ListItemText primary="Services" />
+              </ListItem>
+              <ListItem
+                button
+                component={Link}
+                to="/contact"
+                onClick={handleDrawerClose}
+              >
+                <ListItemText primary="Contact" />
+              </ListItem>
+              <ListItem
+                button
+                component={Link}
+                to="/profile"
+                onClick={handleDrawerClose}
+              >
+                <ListItemText primary="Profile" />
+              </ListItem>
+              <LogoutForm />
+            </List>
+            <Divider />
+            {/* Add additional Drawer items for login, logout, profile as needed */}
+          </Drawer>
+        </Hidden>
       </Toolbar>
     </AppBar>
   );

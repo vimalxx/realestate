@@ -9,7 +9,7 @@ const Container3 = () => {
       id: 1,
       title: "Beautiful House",
       description:
-        "A house with modern amenities. Lawn and garage are provided.",
+        "A house with modern amenities.Lawn are provided.",
       image: "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg",
       price: 500000,
     },
@@ -43,14 +43,14 @@ const Container3 = () => {
         "https://www.indiabullsrealestate.com/wp-content/uploads/2016/12/one-indiabulls-vadodara.jpg",
       title: "Commercial Property",
       description:
-        "The Mall with 20 floors. Each floor contains more than 50 rooms.",
+        "The Mall with 20 floors.Floor contains more rooms.",
       price: 15000000,
     },
     {
       id: 6,
       title: "Beautiful House",
       description:
-        "A house with modern amenities. Lawn and garage are provided.",
+        "A house with modern amenities.Lawn are provided.",
       image: "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg",
       price: 500000,
     },
@@ -84,7 +84,7 @@ const Container3 = () => {
         "https://www.indiabullsrealestate.com/wp-content/uploads/2016/12/one-indiabulls-vadodara.jpg",
       title: "Commercial Property",
       description:
-        "The Mall with 20 floors. Each floor contains more than 50 rooms.",
+        "The Mall with 20 floors.Floor contains more rooms.",
       price: 15000000,
     },
     // Add more properties as needed

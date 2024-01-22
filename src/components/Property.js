@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardContent, CardMedia, Typography, Grid } from "@mui/material";
+import { Card, CardContent, CardMedia, Typography, Grid, Button } from "@mui/material";
 
 const PropertyList = ({ properties }) => {
   return (
@@ -25,6 +25,9 @@ const PropertyList = ({ properties }) => {
               <Typography variant="subtitle2" color="text.secondary">
                 Price: ${property.price}
               </Typography>
+              <Button variant="contained" color="primary">
+                View Details
+              </Button>
             </CardContent>
           </Card>
         </Grid>

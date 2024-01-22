@@ -1,5 +1,3 @@
-// AboutUs.js
-
 import React from "react";
 import { Container, Grid, Typography } from "@mui/material";
 
@@ -18,12 +16,11 @@ const About = () => {
         fontSize: "20px",
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
         justifyContent: "center",
       }}
     >
       <Grid container justifyContent="center" spacing={4}>
-        <Grid item md={8} xs={12} textAlign="center">
+        <Grid item xs={12} md={8} textAlign="center">
           <Typography variant="h2" align="center" gutterBottom>
             About Us
           </Typography>
@@ -70,7 +67,7 @@ const About = () => {
           </Typography>
           {/* ... (rest of the paragraphs) */}
         </Grid>
-        <Grid item md={4} xs={12}>
+        <Grid item xs={12} md={4}>
           {/* You can add an image or additional content here */}
         </Grid>
       </Grid>

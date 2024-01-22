@@ -3,7 +3,7 @@ import Container2 from "./Container2";
 import Container1 from "./Container1";
 import Container4 from "./Container4";
 import Container5 from "./Container5";
-import { CssBaseline, Container, Paper } from "@mui/material";
+import { CssBaseline, Container, Paper, Grid } from "@mui/material";
 
 const Home = () => {
   return (
@@ -16,10 +16,10 @@ const Home = () => {
         <Container2 />
       </section>
       <section className="search-section">
-        <Container component="main" maxWidth="md">
+        <Container maxWidth="md" component="main">
           <Paper
             elevation={3}
-            style={{
+            sx={{
               padding: "20px",
               borderRadius: "8px",
               marginTop: "20px",
@@ -31,7 +31,13 @@ const Home = () => {
         <br />
       </section>
       <section className="about-us">
-        <Container5 />
+        <Container maxWidth="md">
+          <Grid container spacing={2}>
+            <Grid item xs={12}>
+              <Container5 />
+            </Grid>
+          </Grid>
+        </Container>
       </section>
     </div>
   );

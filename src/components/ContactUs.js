@@ -46,7 +46,7 @@ const ContactUs = () => {
                   fullWidth
                   required
                   margin="normal"
-                  autoComplete="on"
+                  autoComplete="name" // Set autoComplete to "name" for name field
                 />
                 <TextField
                   id="formEmail"
@@ -56,7 +56,7 @@ const ContactUs = () => {
                   fullWidth
                   required
                   margin="normal"
-                  autoComplete="on"
+                  autoComplete="email" // Set autoComplete to "email" for email field
                 />
                 <TextField
                   id="formMessage"
@@ -67,7 +67,7 @@ const ContactUs = () => {
                   fullWidth
                   required
                   margin="normal"
-                  autoComplete="on"
+                  autoComplete="message" // Set autoComplete to "message" for message field
                 />
                 <Button
                   variant="contained"

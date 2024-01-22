@@ -24,7 +24,7 @@ const Services = () => {
     <div style={{ backgroundColor: "lightcoral", minHeight: "100vh" }}>
       <Container
         maxWidth="lg"
-        style={{
+        sx={{
           backgroundColor: "lightcoral",
           display: "flex",
           flexDirection: "column",
@@ -42,7 +42,7 @@ const Services = () => {
         </Typography>
         <Grid container spacing={4} justifyContent="center" className="mt-4">
           {servicesData.map((service, index) => (
-            <Grid key={index} item md={4}>
+            <Grid key={index} item xs={12} sm={6} md={4}>
               <Card>
                 <img
                   src={require(`/src/images/${service.image}`).default}
