@@ -3,11 +3,16 @@ import Container2 from "./Container2";
 import Container1 from "./Container1";
 import Container4 from "./Container4";
 import Container5 from "./Container5";
+import Footer from "./Footer";
 import { CssBaseline, Container, Paper, Grid } from "@mui/material";
 
 const Home = () => {
+  const pageStyle = {
+    backgroundColor: "gray", // Set your desired gray color
+  };
+
   return (
-    <div>
+    <div style={pageStyle}>
       <CssBaseline />
       <section className="hero-section">
         <Container1 />
@@ -38,6 +43,9 @@ const Home = () => {
             </Grid>
           </Grid>
         </Container>
+      </section>
+      <section>
+        <Footer />
       </section>
     </div>
   );

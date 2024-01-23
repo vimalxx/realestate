@@ -1,6 +1,7 @@
 import React from "react";
 import {
   AppBar,
+  Avatar,
   Toolbar,
   Typography,
   Button,
@@ -16,6 +17,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
 import LoginForm from "./LoginForm";
 import LogoutForm from "./LogoutForm";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const NavbarComponent = () => {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
@@ -28,17 +30,22 @@ const NavbarComponent = () => {
     setDrawerOpen(false);
   };
 
+  const { user, isAuthenticated } = useAuth0();
+
   return (
     <AppBar position="static" sx={{ backgroundColor: "black" }}>
       <Toolbar>
-        <IconButton
-          edge="start"
-          color="inherit"
-          onClick={handleDrawerOpen}
-          sx={{ mr: 2 }}
-        >
-          <MenuIcon />
-        </IconButton>
+        {/* Hidden on smUp means it will be hidden on screens size sm and up (desktop) */}
+        <Hidden smUp>
+          <IconButton
+            edge="start"
+            color="inherit"
+            onClick={handleDrawerOpen}
+            sx={{ mr: 2 }}
+          >
+            <MenuIcon />
+          </IconButton>
+        </Hidden>
         <Typography
           variant="h6"
           component={Link}
@@ -99,7 +106,19 @@ const NavbarComponent = () => {
               Contact
             </Button>
             <LoginForm />
-            <LogoutForm />
+            {isAuthenticated && (
+              <Button component={Link} to="/profile">
+                <Avatar
+                  alt={user.name}
+                  src={user.picture}
+                  sx={{
+                    width: 30,
+                    height: 30,
+                    margin: "0 8px",
+                  }}
+                />
+              </Button>
+            )}
           </nav>
         </Hidden>
 
