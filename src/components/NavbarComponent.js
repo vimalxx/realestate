@@ -71,7 +71,7 @@ const NavbarComponent = () => {
               color="inherit"
               sx={{ fontWeight: "bold", mx: 1 }}
             >
-              He
+              Home
             </Button>
             <Button
               component={Link}
