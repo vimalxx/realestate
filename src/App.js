@@ -13,15 +13,16 @@ function App() {
   return (
     <BrowserRouter>
       <CssBaseline />
-        <NavbarComponent />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/property" element={<Container3 />} />
-          <Route path="/contact" element={<ContactUs />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/profile" element={<Profile />} />
-        </Routes>
+      <NavbarComponent />
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/property" element={<Container3 />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/profile" element={<Profile />} />
+      </Routes>
     </BrowserRouter>
   );
 }
