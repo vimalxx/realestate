@@ -49,7 +49,7 @@ const NavbarComponent = () => {
         <Typography
           variant="h6"
           component={Link}
-          to="/"
+          to="/home"
           sx={{ flexGrow: 1, textDecoration: "none", color: "inherit" }}
         >
           <img
@@ -67,11 +67,11 @@ const NavbarComponent = () => {
           <nav style={{ display: "flex" }}>
             <Button
               component={Link}
-              to="/"
+              to="/home"
               color="inherit"
               sx={{ fontWeight: "bold", mx: 1 }}
             >
-              Home
+              He
             </Button>
             <Button
               component={Link}
@@ -129,7 +129,7 @@ const NavbarComponent = () => {
               <ListItem
                 button
                 component={Link}
-                to="/"
+                to="/home"
                 onClick={handleDrawerClose}
               >
                 <ListItemText primary="Home" />

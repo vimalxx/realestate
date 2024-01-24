@@ -16,7 +16,7 @@ function App() {
       <NavbarComponent />
       <Routes>
         <Route index element={<Home />} />
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/property" element={<Container3 />} />
         <Route path="/contact" element={<ContactUs />} />
