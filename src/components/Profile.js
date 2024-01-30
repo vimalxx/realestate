@@ -18,6 +18,9 @@ const Profile = () => {
     return <CircularProgress />;
   }
 
+  const backgroundImageUrl =
+    "https://img.freepik.com/free-photo/top-view-desk-concept-with-coffee_23-2148604923.jpg?w=1060&t=st=1706587522~exp=1706588122~hmac=33d6e17d19018238fd58003d00c4b9bbb7eeabc3a2a0cabbdd8f2d7ef442f519";
+
   return (
     <Container
       component="main"
@@ -27,7 +30,10 @@ const Profile = () => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
+        minWidth: "100%",
         minHeight: "100vh",
+        backgroundImage: `url(${backgroundImageUrl})`,
+        backgroundSize: "cover",
       }}
     >
       {isAuthenticated ? (
@@ -67,7 +73,7 @@ const Profile = () => {
         </Paper>
       ) : (
         <Alert severity="info" style={{ marginTop: "20px" }}>
-          Please log in to view the profile page. 
+          Please log in to view the profile page.
         </Alert>
       )}
     </Container>
