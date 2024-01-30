@@ -4,13 +4,14 @@ import { Container, Typography } from "@mui/material";
 const Footer = () => {
   return (
     <footer
-      style={{ backgroundColor: "#000000", color: "#fff", padding: "10px" }}
+      style={{
+        background:
+          "radial-gradient(circle at 50% 0%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%)",
+        color: "#fff",
+        padding: "10px",
+      }}
     >
       <Container maxWidth="lg">
-        <Typography align="center" gutterBottom>
-          Realty King ~ Your Trusted Partner in Real Estate
-        </Typography>
-
         <Typography
           variant="body2"
           align="center"
