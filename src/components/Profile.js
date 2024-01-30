@@ -34,6 +34,8 @@ const Profile = () => {
         minHeight: "100vh",
         backgroundImage: `url(${backgroundImageUrl})`,
         backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
       }}
     >
       {isAuthenticated ? (
