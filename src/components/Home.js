@@ -44,6 +44,7 @@ const Home = () => {
           </Grid>
         </Container>
       </section>
+  <br />
       <section>
         <Footer />
       </section>
